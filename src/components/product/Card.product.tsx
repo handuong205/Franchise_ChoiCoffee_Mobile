@@ -1,22 +1,21 @@
 import { LinearGradient } from 'expo-linear-gradient'
 import React from 'react'
 import { Image, Pressable, Text, View } from 'react-native'
+import { Product } from '../home/model/productResponse'
 
 type CardProductProps = {
-    title: string,
-  description: string,
-  price: string,
-  imageUrl: string,
+  product: Product,
   onPress: () => void,
   onAdd: () => void,
+  className?: string,
 }
 
 const CardProduct = (props: CardProductProps) => {
   return (
-    <Pressable onPress={props.onPress } className="mb-6 w-1/2 px-2">
-      <View className="relative mb-3 overflow-hidden rounded-xl">
+    <Pressable onPress={props.onPress } className={`mb-6 w-1/2 px-2 ${props.className || ''}`}>
+      <View className="relative mb-3 overflow-hidden rounded-xl ">
         {/* Image */}
-        <Image source={{ uri: props.imageUrl }} className="h-48 w-full" resizeMode="cover" />
+        <Image source={{ uri: props.product.image_url }} className="h-48 w-full" resizeMode="cover" />
 
         {/* Gradient overlay (giữ text rõ) */}
         <LinearGradient
@@ -42,11 +41,11 @@ const CardProduct = (props: CardProductProps) => {
       </View>
 
       {/* Info */}
-      <Text className="text-base font-bold text-charcoal">{props.title}</Text>
+      <Text className="text-base font-bold text-charcoal">{props.product.name}</Text>
 
-      <Text className="mt-1 text-xs text-gray-400">{props.description}</Text>
+      {/* <Text className="mt-1 text-xs text-gray-400">{props.product.description}</Text> */}
 
-      <Text className="mt-2 text-sm font-semibold text-orange-400">{props.price}</Text>
+      <Text className="mt-2 text-sm font-semibold text-orange-400">{props.product.sizes[0].price.toLocaleString()}Đ</Text>
     </Pressable>
   );
 }

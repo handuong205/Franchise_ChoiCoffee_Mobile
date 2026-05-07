@@ -19,7 +19,7 @@ interface CustomerAuthState {
   hydrate: () => void;
 }
 
-export const useCustomerAuthStore = create<CustomerAuthState>()(
+export const  useCustomerAuthStore = create<CustomerAuthState>()(
   persist(
     (set) => ({
       customer: null,

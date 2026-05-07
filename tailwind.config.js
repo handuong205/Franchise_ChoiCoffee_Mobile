@@ -3,7 +3,7 @@ const { FONTS } = require('./src/theme/fonts/font');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/App.{js,ts,tsx}', './src/components/**/*.{js,ts,tsx}'],
+  content: ['./src/**/*.{js,ts,tsx}'],
 
   presets: [require('nativewind/preset')],
   theme: {

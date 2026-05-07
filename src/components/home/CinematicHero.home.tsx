@@ -27,12 +27,12 @@ const CinematicHero = () => {
           start={{ x: 0.5, y: 0 }}
           end={{ x: 0.5, y: 1 }}
           style={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-    }}
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+          }}
         />
 
         {/* Gradient 2: chéo */}
@@ -45,12 +45,12 @@ const CinematicHero = () => {
           start={{ x: 0, y: 1 }}
           end={{ x: 1, y: 0 }}
           style={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-    }}
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+          }}
         />
       </View>
 
@@ -64,7 +64,7 @@ const CinematicHero = () => {
           The Midnight{'\n'}Roast
         </Text>
 
-        <Text className="mb-6 max-w-md font-poppins-regular text-sm text-text-charcoal">
+        <Text className="text-text-charcoal mb-6 max-w-md font-poppins-regular text-sm">
           Experience the depth of our darkest roast. Notes of dark chocolate, black cherry, and
           smoked oak.
         </Text>

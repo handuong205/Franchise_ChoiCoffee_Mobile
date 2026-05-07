@@ -3,10 +3,12 @@ import HomeScreen from '@/screens/home/HomeScreen';
 import ProductScreen from '@/screens/product/ProductScreen';
 import { Ionicons } from '@expo/vector-icons';
 import { Animated } from 'react-native';
+import ProfileScreen from '@/screens/profile/ProfileScreen';
 
 export type BottomTabParamList = {
   home: { scrollY: Animated.Value } | undefined;
   product: { scrollY: Animated.Value } | undefined;
+  profile:  undefined;
 };
 
 
@@ -32,7 +34,7 @@ const BottomTabs = ({route} : any) => {
 
           if (route.name === 'home') iconName = 'home-sharp';
           if (route.name === 'product') iconName = 'cafe-sharp';
-
+          if (route.name === 'profile') iconName = 'person-sharp';
           return <Ionicons name={iconName} size={size} color={color} />;
         },
       })}
@@ -44,6 +46,7 @@ const BottomTabs = ({route} : any) => {
         initialParams={{ scrollY }}
       />
       <Tab.Screen name="product" component={ProductScreen} options={{ title: 'Sản phẩm' }} />
+      <Tab.Screen name="profile" component={ProfileScreen} options={{ title: 'Hồ sơ' }}  />
     </Tab.Navigator>
   );
 };
