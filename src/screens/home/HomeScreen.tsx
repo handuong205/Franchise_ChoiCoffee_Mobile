@@ -4,7 +4,7 @@ import { Animated } from "react-native"
 // import { useRef, useEffect } from 'react'
 import { useScroll } from "@/context/TabContext"
 import CategorySection from "@/components/home/CategorySection.home"
-import PromotionSection from "@/components/home/PromotionSection.home"
+import VoucherSection from "@/components/home/VoucherSection.home"
 
 const HomeScreen = () => {
   const scrollY = useScroll();
@@ -27,7 +27,7 @@ const HomeScreen = () => {
       >
         <CinematicHero/>
         <CategorySection/>
-        <PromotionSection/>
+        <VoucherSection/>
         <ProductSection/>
       </Animated.ScrollView>  
     </>
